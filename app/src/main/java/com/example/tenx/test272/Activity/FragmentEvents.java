@@ -1,6 +1,5 @@
 package com.example.tenx.test272.Activity;
 
-import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -18,10 +17,10 @@ public class FragmentEvents extends Fragment{
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_events, container, false);
+        View view = inflater.inflate(R.layout.fragment_events_home, container, false);
 
         ImageView testImg = view.findViewById(R.id.events_image1);
-        Glide.with(getActivity()).load("https://qph.fs.quoracdn.net/main-qimg-6ea86a6833b541d713f8a15b49877083-c").apply(new RequestOptions().centerCrop()).into(testImg);
+        Glide.with(getActivity()).load("https://qph.fs.quoracdn.net/main-qimg-6ea86a6833b541d713f8a15b49877083-c").into(testImg);
 
         return view;
     }

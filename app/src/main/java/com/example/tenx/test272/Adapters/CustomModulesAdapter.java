@@ -38,7 +38,7 @@ public class CustomModulesAdapter extends RecyclerView.Adapter<CustomModulesAdap
     @Override
     public CustomViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(context).inflate(R.layout.home_recycler_view_holder, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.viewholder_modules_item, parent, false);
 
 
         return new CustomViewHolder(view);

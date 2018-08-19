@@ -19,7 +19,7 @@ public class FragmentSpark extends Fragment{
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_spark, container, false);
         ImageView mainPoster = view.findViewById(R.id.fragment_spark_image);
-        Glide.with(getActivity()).load("http://tecnoesis.in/vr/images/Spark/spark.png").apply(new RequestOptions().centerCrop()).into(mainPoster);
+        Glide.with(getActivity()).load("http://tecnoesis.in/vr/images/Spark/spark.png").into(mainPoster);
         return view;
     }
 }

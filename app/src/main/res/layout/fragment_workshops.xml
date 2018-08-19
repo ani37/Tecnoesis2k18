@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <ImageView
-        android:id="@+id/image_workshops1"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_workshops_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textColor="@color/text_color"
-        android:gravity="center"
-        android:textSize="40sp"
-        android:scaleType="centerCrop"
-        />
+        tools:listitem="@layout/viewholder_workshop_item"
+        >
+    </android.support.v7.widget.RecyclerView>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

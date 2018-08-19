@@ -61,7 +61,7 @@ public class FragmentNotifications extends Fragment{
         recyclerView = view.findViewById(R.id.notification_recycler);
 
 
-        appRepository = new AppRepository(getActivity().getApplication());
+        appRepository = new AppRepository(Objects.requireNonNull(getActivity()).getApplication());
 
         //tog btn
         ToggleButton tog = view.findViewById(R.id.tog_subscribe);

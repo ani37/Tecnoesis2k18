@@ -43,6 +43,6 @@ public class HomeFragmentPagerAdapter extends FragmentPagerAdapter{
 
     @Override
     public int getCount() {
-        return EventsUtils.homeFragmentsList.length;
+        return 4;
     }
 }

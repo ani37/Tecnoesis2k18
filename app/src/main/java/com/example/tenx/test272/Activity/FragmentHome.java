@@ -45,6 +45,8 @@ public class FragmentHome extends Fragment{
         homePagerAdapter = new HomePagerAdapter(getActivity());
         viewPager.addOnPageChangeListener(new CircularPagerHandler(viewPager, homePagerAdapter));
         viewPager.setAdapter(homePagerAdapter);
+
+
         //appbar
         appBarLayout = view.findViewById(R.id.home_appbar_layout);
 
@@ -54,7 +56,7 @@ public class FragmentHome extends Fragment{
 
 
 
-   //setting up the view pager for the home fragments
+        //setting up the view pager for the home fragments
         fragmentViewPager = view.findViewById(R.id.home_fragment_viewpager);
         fragmentAdapter = new HomeFragmentPagerAdapter(getChildFragmentManager(), getActivity());
         fragmentViewPager.setAdapter(fragmentAdapter);
