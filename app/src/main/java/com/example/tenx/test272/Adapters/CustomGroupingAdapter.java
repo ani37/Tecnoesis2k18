@@ -2,7 +2,6 @@ package com.example.tenx.test272.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.media.Image;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
@@ -38,11 +37,11 @@ public class CustomGroupingAdapter extends RecyclerView.Adapter<RecyclerView.Vie
         View view;
         LayoutInflater inflater = LayoutInflater.from(mCtx);
         if(i == ListItem.TYPE_EVENT){
-            view = inflater.inflate(R.layout.container_event_item, viewGroup, false);
+            view = inflater.inflate(R.layout.viewholder_container_event_item, viewGroup, false);
             return new EventViewHolder(view);
         }
         if(i== ListItem.TYPE_HEADER){
-            view = inflater.inflate(R.layout.container_header_item, viewGroup, false);
+            view = inflater.inflate(R.layout.viewholder_container_header_item, viewGroup, false);
             return new HeaderViewHolder(view);
         }
         return null;

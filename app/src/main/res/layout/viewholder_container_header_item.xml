@@ -17,6 +17,7 @@
         android:textStyle="bold"
         android:gravity="center"
         android:textColor="@color/text_color"
+        android:typeface="sans"
         />
     <ImageView
         android:layout_width="50dp"

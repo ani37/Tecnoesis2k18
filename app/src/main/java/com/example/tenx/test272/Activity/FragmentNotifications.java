@@ -1,7 +1,11 @@
 package com.example.tenx.test272.Activity;
 
+import android.app.Activity;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -30,6 +34,7 @@ import com.example.tenx.test272.DatabaseElements.Models.Notification;
 import com.example.tenx.test272.DatabaseElements.ViewModels.AppViewModel;
 import com.example.tenx.test272.R;
 
+import com.github.clans.fab.FloatingActionMenu;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.messaging.FirebaseMessaging;
 
@@ -40,16 +45,22 @@ import java.util.Objects;
 
 public class FragmentNotifications extends Fragment{
 
+
     RecyclerView recyclerView;
     NotificationsAdapter adapter;
     private final static String TAG = "FragmentNotifications!";
     private List<Notification> mList;
     private static final String TOG_SAVE_KEY = "togref";
 
+
+
     AppViewModel viewModel;
     AppRepository appRepository ;
 
     SharedPreferences preferences;
+
+    FloatingActionMenu mFabMenu;
+    com.github.clans.fab.FloatingActionButton mFabConfResuts,mFabRobotronResults,mFabOtherResults;
 
 
 
@@ -57,8 +68,50 @@ public class FragmentNotifications extends Fragment{
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_notification, container, false);
+        View view = inflater.inflate(R.layout.fragment_notifications_home, container, false);
         recyclerView = view.findViewById(R.id.notification_recycler);
+
+        //fabmenu
+        mFabMenu = view.findViewById(R.id.fab_menu);
+        mFabConfResuts = view.findViewById(R.id.fab_conferenza_results);
+        mFabOtherResults = view.findViewById(R.id.fab_others_results);
+        mFabRobotronResults = view.findViewById(R.id.fab_robotron_results);
+
+        mFabRobotronResults.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                android.support.v4.app.FragmentManager manager = getFragmentManager();
+                assert manager != null;
+                android.support.v4.app.FragmentTransaction ft = manager.beginTransaction();
+                ft.setCustomAnimations(R.anim.slide_in, R.anim.slide_out);
+                ft.replace(R.id.container_notif_frame, new ChildFragmentRobotronResults());
+                ft.commit();
+
+            }
+        });
+        mFabConfResuts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                android.support.v4.app.FragmentManager manager = getFragmentManager();
+                assert manager != null;
+                android.support.v4.app.FragmentTransaction ft = manager.beginTransaction();
+                ft.setCustomAnimations(R.anim.slide_in, R.anim.slide_out);
+                ft.replace(R.id.container_notif_frame, new ChildFragmentConferenzaResults());
+                ft.commit();
+            }
+        });
+        mFabOtherResults.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                android.support.v4.app.FragmentManager manager = getFragmentManager();
+                assert manager != null;
+                android.support.v4.app.FragmentTransaction ft = manager.beginTransaction();
+                ft.setCustomAnimations(R.anim.slide_in, R.anim.slide_out);
+                ft.replace(R.id.container_notif_frame, new ChildFragmentOthersResults());
+                ft.commit();
+            }
+        });
+
 
 
         appRepository = new AppRepository(Objects.requireNonNull(getActivity()).getApplication());
@@ -138,6 +191,13 @@ public class FragmentNotifications extends Fragment{
         return view;
     }
 
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+
+    }
+
     public void showPopup(View v){
         PopupMenu popup = new PopupMenu(getActivity(), v);
         MenuInflater inflater = popup.getMenuInflater();
@@ -156,5 +216,10 @@ public class FragmentNotifications extends Fragment{
             }
         });
     }
+
+
+
+
+
 }
 

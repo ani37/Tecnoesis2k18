@@ -44,7 +44,8 @@ import java.util.Map;
 import java.util.Objects;
 
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity{
+
 
 
     TabLayout tabLayout;
@@ -54,7 +55,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         setContentView(R.layout.activity_home);
@@ -132,6 +133,8 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
+
+
 
 
 }

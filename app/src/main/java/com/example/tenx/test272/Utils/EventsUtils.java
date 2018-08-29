@@ -4,6 +4,7 @@ import com.example.tenx.test272.ListItems.EventItem;
 import com.example.tenx.test272.ListItems.HeaderItem;
 import com.example.tenx.test272.ListItems.ListItem;
 import com.example.tenx.test272.R;
+import com.example.tenx.test272.Utils.Models.Event;
 import com.example.tenx.test272.Utils.Models.Workshop;
 
 import java.util.ArrayList;
@@ -48,6 +49,29 @@ public class EventsUtils {
         list.add(new Workshop("Learn new skills with us!", "http://www.tecnoesis.in", R.drawable.works_web));
         list.add(new Workshop("Learn new skills with us!", "http://www.tecnoesis.in", R.drawable.works_java));
         list.add(new Workshop("Learn new skills with us!", "http://www.tecnoesis.in", R.drawable.works_hack));
+        return list;
+    }
+
+    public static List<Event> getEventsList(){
+        List<Event> list = new ArrayList<>();
+        list.add(new Event(R.drawable.event_shootout, "http://www.tecnoesis.in",""));
+        list.add(new Event(R.drawable.event_shootout, "http://www.tecnoesis.in",""));
+        list.add(new Event(R.drawable.event_shootout, "http://www.tecnoesis.in",""));
+        list.add(new Event(R.drawable.event_shootout, "http://www.tecnoesis.in",""));
+        list.add(new Event(R.drawable.event_shootout, "http://www.tecnoesis.in",""));
+        list.add(new Event(R.drawable.event_shootout, "http://www.tecnoesis.in",""));
+
+        return list;
+    }
+
+    public static List<Event> getSparkEventList(){
+        List<Event> list = new ArrayList<>();
+        list.add(new Event(R.drawable.spark_1, "http://www.tecnoesis.in",""));
+        list.add(new Event(R.drawable.spark_2_nalayak, "http://www.tecnoesis.in",""));
+        list.add(new Event(R.drawable.spark_3, "http://www.tecnoesis.in",""));
+        list.add(new Event(R.drawable.spark, "http://www.tecnoesis.in",""));
+        list.add(new Event(R.drawable.spark_5, "http://www.tecnoesis.in",""));
+        list.add(new Event(R.drawable.spark_4, "http://www.tecnoesis.in",""));
         return list;
     }
 

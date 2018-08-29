@@ -17,6 +17,12 @@
     <color name="tab_normal">#e4d0d0</color>
     <color name="toggle_on">#3ebf17</color>
     <color name="toggle_off">#dc2f08</color>
+    <color name="icon_fill">#f1cfcf</color>
+
+    //fab menu
+    <color name="fab_normal">#e27231</color>
+    <color name="fab_pressed">#e6986b</color>
+    <color name="fab_ripple">#eac3ac</color>
 
 
 </resources>

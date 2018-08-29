@@ -12,9 +12,10 @@ import android.widget.TextView;
 import com.example.tenx.test272.DatabaseElements.Models.Notification;
 import com.example.tenx.test272.R;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
-
-import com.example.tenx.test272.Utils.EventsUtils;
+import java.util.Locale;
 
 public class NotificationsAdapter extends RecyclerView.Adapter<NotificationsAdapter.CustomViewholder>{
 
@@ -29,13 +30,52 @@ public class NotificationsAdapter extends RecyclerView.Adapter<NotificationsAdap
     @NonNull
     @Override
     public CustomViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.recyclerview_item_notif, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.viewholder_notification_item, parent, false);
         return new CustomViewholder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull CustomViewholder holder, int position) {
-        holder.textView.setText(mList.get(position).getmText());
+        holder.tvMessage.setText(mList.get(position).getmText());
+        long issueTimeMillis = mList.get(position).getmIssueTime();
+        Date date = new Date(issueTimeMillis);
+        long currentTime = System.currentTimeMillis();
+        SimpleDateFormat dfDay = new SimpleDateFormat("dd", Locale.getDefault());
+        SimpleDateFormat dfDisplayHrMin = new SimpleDateFormat("h:mm:aa", Locale.getDefault());
+        SimpleDateFormat displayFullTime = new SimpleDateFormat("EEE MMM d,  h:mm:aa", Locale.getDefault());
+        int dayDiff = Integer.parseInt(dfDay.format(currentTime)) -  Integer.parseInt(dfDay.format(date));
+
+
+        long diff = currentTime - issueTimeMillis;
+        long min = diff/(60*1000);
+        long hrs = diff/(60*60*1000);
+        String timeOutput = "";
+       if(dayDiff == 0){
+           if(min==0){
+               timeOutput = "just now";
+           }else if(min<60 && min>0){
+               if(min==1){
+                   timeOutput = min+" minute ago";
+               }else{
+                   timeOutput = min+" minutes ago";
+               }
+           }else if(hrs>0){
+               if(hrs == 1){
+                   timeOutput = hrs+" hour ago";
+               }else{
+                   timeOutput = hrs+" hours ago";
+               }
+           }
+       }
+       else{
+           if(dayDiff == 1){
+               timeOutput = "yesterday , "+dfDisplayHrMin.format(date);
+           }else {
+           timeOutput = ""+displayFullTime.format(date);
+           }
+       }
+
+        holder.tvTime.setText(timeOutput);
 
     }
 
@@ -46,10 +86,11 @@ public class NotificationsAdapter extends RecyclerView.Adapter<NotificationsAdap
 
     class CustomViewholder extends RecyclerView.ViewHolder{
 
-        private TextView textView;
+        private TextView tvMessage, tvTime;
         private CustomViewholder(View itemView) {
             super(itemView);
-            textView = itemView.findViewById(R.id.notification_textview);
+            tvMessage = itemView.findViewById(R.id.notification_textview);
+            tvTime = itemView.findViewById(R.id.tv_notif_time);
         }
     }
 

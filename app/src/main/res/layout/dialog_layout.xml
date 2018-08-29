@@ -7,8 +7,8 @@
     <ImageView
         android:id="@+id/dialog_event_image"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:scaleType="centerCrop"
+        android:layout_height="225dp"
+        android:scaleType="fitXY"
         android:layout_margin="5dp"
         tools:src="@drawable/ic_launcher_background"
         />

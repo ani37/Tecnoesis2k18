@@ -5,12 +5,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.example.tenx.test272.Activity.FragmentEvents;
+import com.example.tenx.test272.Activity.ChildFragmentEvents;
 import com.example.tenx.test272.Activity.FragmentModules;
 import com.example.tenx.test272.Activity.FragmentSpark;
 import com.example.tenx.test272.Activity.FragmentWorkshops;
-
-import com.example.tenx.test272.Utils.EventsUtils;
 
 public class HomeFragmentPagerAdapter extends FragmentPagerAdapter{
     private Context context;
@@ -26,7 +24,7 @@ public class HomeFragmentPagerAdapter extends FragmentPagerAdapter{
         Fragment fragment = null;
         switch (position){
             case 0:
-                fragment = new FragmentEvents();
+                fragment = new ChildFragmentEvents();
                 break;
             case 1:
                 fragment = new FragmentWorkshops();

@@ -3,7 +3,6 @@ package com.example.tenx.test272.Activity;
 
 import android.graphics.PorterDuff;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
@@ -16,43 +15,26 @@ import android.view.ViewGroup;
 
 import com.example.tenx.test272.Adapters.HomeFragmentPagerAdapter;
 import com.example.tenx.test272.Adapters.HomePagerAdapter;
-import com.example.tenx.test272.Adapters.Listeners.CircularPagerHandler;
 import com.example.tenx.test272.R;
-
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class FragmentHome extends Fragment{
 
     private ViewPager viewPager;
      HomePagerAdapter homePagerAdapter;
-     Timer timer;
+
       ViewPager fragmentViewPager;
       HomeFragmentPagerAdapter fragmentAdapter;
       TabLayout tabs;
-      AppBarLayout appBarLayout;
-
-    int current_page = 0;
-    final long DELAY_MS = 500;
-    final long PERIOD_MS = 3500;
+        AppBarLayout appbar;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        viewPager = view.findViewById(R.id.home_view_pager);
-        homePagerAdapter = new HomePagerAdapter(getActivity());
-        viewPager.addOnPageChangeListener(new CircularPagerHandler(viewPager, homePagerAdapter));
-        viewPager.setAdapter(homePagerAdapter);
 
-
-        //appbar
-        appBarLayout = view.findViewById(R.id.home_appbar_layout);
-
-
-
-
+        //collapsing toolbar/appbar
+        appbar = view.findViewById(R.id.appbar_layout);
 
 
 
@@ -67,8 +49,8 @@ public class FragmentHome extends Fragment{
         tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-              tab.getIcon().setColorFilter(getResources().getColor(R.color.tab_highlight), PorterDuff.Mode.SRC_IN);
-              appBarLayout.setExpanded(false);
+                tab.getIcon().setColorFilter(getResources().getColor(R.color.tab_highlight), PorterDuff.Mode.SRC_IN);
+                appbar.setExpanded(false);
             }
 
             @Override
@@ -78,8 +60,7 @@ public class FragmentHome extends Fragment{
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-
-                appBarLayout.setExpanded(false);
+                appbar.setExpanded(false);
 
             }
         });
@@ -94,23 +75,8 @@ public class FragmentHome extends Fragment{
         tabs.getTabAt(0).getIcon().setColorFilter(getResources().getColor(R.color.tab_highlight), PorterDuff.Mode.SRC_IN);
         tabs.setSelectedTabIndicatorHeight(0);
 
-
-
-
-        TimerTask timerTask = new TimerTask() {
-            @Override
-            public void run() {
-                viewPager.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        int currentItem = viewPager.getCurrentItem();
-                        viewPager.setCurrentItem(currentItem+1, true);
-                    }
-                });
-            }
-        };
-        Timer timer = new Timer();
-        timer.schedule(timerTask, 500, 2300);
         return view;
+
+
     }
 }
