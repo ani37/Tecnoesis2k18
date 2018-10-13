@@ -15,11 +15,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "1023344813822-v82mescpv7vuajb454f00gssg5tvjkfq.apps.googleusercontent.com",
+          "client_id": "1023344813822-nsa3vomd8s77nl40dgpcrrkudnfsj93k.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.tenx.test272",
-            "certificate_hash": "7be71a5be664c0fca43a78dbe3b6d4598e3a0a54"
+            "certificate_hash": "6c3aac6ac59b1a5bc1441b656be331e2de5d1450"
           }
         },
         {

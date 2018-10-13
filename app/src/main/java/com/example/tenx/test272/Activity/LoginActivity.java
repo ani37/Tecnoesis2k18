@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
     CallbackManager mCallbackManager;
     private static final String TAG = "GOOGLELOG";
     FirebaseAuth mAuth;
-    ImageView imgView;
+    ImageView imgView, smallLogo;
     Button btnLogin;
     LottieAnimationView lottieAnim;
     private GoogleSignInClient mGoogleSignInClient;
@@ -95,7 +95,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         imgView = findViewById(R.id.iv_loader_image);
         btnLogin = findViewById(R.id.btn_login);
-
+        smallLogo = findViewById(R.id.iv_logo_small);
         imgView.setVisibility(View.VISIBLE);
         btnLogin.setVisibility(View.GONE);
 
@@ -149,6 +149,7 @@ public class LoginActivity extends AppCompatActivity {
             public void run() {
                 imgView.setVisibility(View.GONE);
                 btnLogin.setVisibility(View.VISIBLE);
+                smallLogo.setVisibility(View.VISIBLE);
             }
         },WELCOME_TIMEOUT);
 

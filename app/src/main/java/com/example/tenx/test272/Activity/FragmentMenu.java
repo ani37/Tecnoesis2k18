@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.tenx.test272.R;
@@ -36,7 +37,7 @@ public class FragmentMenu extends Fragment {
     private static final String TAG = "MenuActivity";
     //imageViews
     CircleImageView civ_profile;
-    TextView tvName;
+    TextView tvName, tvSponsors, tvTeam;
     GoogleSignInClient mGoogleSignInClient;
     GoogleSignInOptions gso;
     @Nullable
@@ -75,6 +76,25 @@ public class FragmentMenu extends Fragment {
                 });
             }
         });
+
+
+        tvSponsors = view.findViewById(R.id.tv_sponsors);
+        tvSponsors.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getActivity(), "Updating soon!", Toast.LENGTH_SHORT).show();
+            }
+        });
+        tvTeam = view.findViewById(R.id.tv_team);
+        tvTeam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getActivity(), "Updating soon!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+
         return view;
     }
 

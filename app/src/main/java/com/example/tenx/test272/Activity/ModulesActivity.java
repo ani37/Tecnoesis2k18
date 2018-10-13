@@ -1,17 +1,14 @@
 package com.example.tenx.test272.Activity;
 
 import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.TableLayout;
 
-import com.example.tenx.test272.Adapters.CustomRobotronAdapter;
+import com.example.tenx.test272.Adapters.CustomModulesPagerAdapter;
 import com.example.tenx.test272.R;
 import com.example.tenx.test272.Utils.EventsUtils;
-import com.example.tenx.test272.Utils.Models.Event;
 import com.example.tenx.test272.Utils.Models.ModuleEvent;
 
 import java.util.List;
@@ -20,7 +17,7 @@ public class ModulesActivity extends AppCompatActivity {
     ViewPager viewPager;
     TabLayout tabLayout;
 
-    CustomRobotronAdapter adapter;
+    CustomModulesPagerAdapter adapter;
     List<ModuleEvent> list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +62,7 @@ public class ModulesActivity extends AppCompatActivity {
 
 
         if(list.size() != 0){
-            adapter = new CustomRobotronAdapter(this, list);
+            adapter = new CustomModulesPagerAdapter(this, list);
             viewPager = findViewById(R.id.vp_robotron_pager);
             viewPager.setAdapter(adapter);
             tabLayout.setupWithViewPager(viewPager);

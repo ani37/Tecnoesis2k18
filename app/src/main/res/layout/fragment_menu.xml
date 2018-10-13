@@ -41,6 +41,28 @@
             />
 
     </LinearLayout>
+    <TextView
+        android:id="@+id/tv_sponsors"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_profile_image"
+        android:text="SPONSORS"
+        android:textColor="@color/text_color"
+        android:textSize="22sp"
+        android:textAlignment="center"
+        android:gravity="center"
+        />
+    <TextView
+        android:id="@+id/tv_team"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_profile_image"
+        android:text="TEAM"
+        android:textColor="@color/text_color"
+        android:textSize="22sp"
+        android:textAlignment="center"
+        android:gravity="center"
+        />
 
 
 

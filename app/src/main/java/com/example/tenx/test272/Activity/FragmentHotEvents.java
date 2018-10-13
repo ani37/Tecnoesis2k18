@@ -25,13 +25,7 @@ public class FragmentHotEvents extends Fragment{
     RecyclerView recyclerView;
     CustomGroupingAdapter adapter;
     FloatingActionButton fab;
-    public void openWebPage(String url) {
-        Uri webpage = Uri.parse(url);
-        Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
-        if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
-            startActivity(intent);
-        }
-    }
+
 
 
     @Nullable
@@ -39,8 +33,6 @@ public class FragmentHotEvents extends Fragment{
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_hot_events, container, false);
         recyclerView = view.findViewById(R.id.recyclerView_whatshot);
-        fab = view.findViewById(R.id.scanner_bar);
-
 
         adapter = new CustomGroupingAdapter(getActivity());
         GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 2);
@@ -60,38 +52,12 @@ public class FragmentHotEvents extends Fragment{
         });
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                startQRScanner();
-
-            }
-        });
 
         return view;
     }
 
 
 
-    private void startQRScanner() {
-        new IntentIntegrator(this.getActivity()).forSupportFragment(this).initiateScan();
-    }
 
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-
-        IntentResult result =   IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
-
-        if (result != null) {
-            if (result.getContents() == null) {
-                Toast.makeText(getActivity(),    "Cancelled",Toast.LENGTH_LONG).show();
-            } else {
-                openWebPage(result.getContents());
-            }
-        } else {
-            super.onActivityResult(requestCode, resultCode, data);
-        }
-    }
 }

@@ -127,8 +127,24 @@ public class FragmentNotifications extends Fragment{
             tog.setChecked(false);
         }
 
+
+
+        boolean firstSub = preferences.getBoolean("firstNotif", false);
+
+
+
+
         //setting up the view model
         viewModel = ViewModelProviders.of(Objects.requireNonNull(getActivity())).get(AppViewModel.class);
+
+
+        if(!firstSub){
+            viewModel.insert(new Notification("Your Notifications will appear here", System.currentTimeMillis()));
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putBoolean("firstNotif", true);
+            editor.apply();
+        }
+
         viewModel.getAllNotifs().observe(this, new Observer<List<Notification>>() {
             @Override
             public void onChanged(@Nullable List<Notification> notifications) {

@@ -1,16 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<android.support.v4.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/background_lighter_black"
-    >
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_events_home"
+    android:layout_height="match_parent">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/viewholder_events_listitem"
+        android:background="@color/background_lighter_black"
+        android:orientation="vertical"
         >
-    </android.support.v7.widget.RecyclerView>
-</android.support.constraint.ConstraintLayout>
+        <ImageView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/nits_hacks"
+        android:scaleType="fitXY"
+        />
+
+        <TextView
+            android:id="@+id/tv_reg_nits_hack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Click Here To Register for Coding Competition or Hackathon!"
+            android:textColor="@color/link_highlight"
+            android:textAlignment="center"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HACKATHON"
+            android:textAlignment="center"
+            android:textColor="@color/header_hacks"
+            android:layout_marginTop="10dp"
+            android:textSize="25sp"
+            android:typeface="sans"
+            />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hackathon"
+            android:textColor="@color/text_color"
+            android:textAlignment="center"
+            />
+        <TextView
+            android:id="@+id/tv_hack_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click Here To Register"
+            android:textColor="@color/link_highlight"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CODING COMPETITION"
+            android:textAlignment="center"
+            android:textColor="@color/header_hacks"
+            android:layout_marginTop="10dp"
+            android:textSize="25sp"
+            android:typeface="sans"
+            />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/codingcomp"
+            android:textColor="@color/text_color"
+            android:textAlignment="center"
+            />
+        <TextView
+            android:id="@+id/tv_ccomp_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click Here To Register"
+            android:textColor="@color/link_highlight"
+            android:layout_marginTop="10dp"
+            />
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
