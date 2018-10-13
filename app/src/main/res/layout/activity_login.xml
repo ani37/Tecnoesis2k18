@@ -6,13 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#ffffff"
     tools:context=".Activity.LoginActivity">
-    <com.airbnb.lottie.LottieAnimationView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:lottie_loop="true"
-        app:lottie_autoPlay="true"
-        app:lottie_fileName="gradient.json"
-        />
 
     <ImageView
         android:id="@+id/iv_loader_image"
@@ -39,7 +32,7 @@
         android:layout_centerInParent="true"
         android:layout_margin="10dp"
         android:background="@drawable/btn_bg"
-        android:text="Login with facebook"
+        android:text="Login with Google"
         android:textSize="16sp"
         />
 

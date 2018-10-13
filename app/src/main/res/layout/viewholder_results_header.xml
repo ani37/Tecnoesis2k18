@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="30dp"
+    android:layout_height="40dp"
     android:background="@drawable/bg_white_border_gradient_dark"
     android:layout_margin="5dp"
     android:orientation="horizontal"
@@ -13,7 +13,7 @@
         android:layout_width="100dp"
         android:layout_height="match_parent"
         tools:text="Second Place"
-        android:textSize="16sp"
+        android:textSize="12sp"
         android:gravity="center_vertical"
         android:layout_marginStart="10dp"
         android:textColor="@color/text_color"
@@ -24,10 +24,11 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         tools:text="EventNAme"
-        android:gravity="start"
+        android:gravity="center_vertical"
         android:textSize="20sp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="30dp"
-        android:textColor="@color/text_color" />
+        android:textColor="@color/text_color"
+        />
 
 </LinearLayout>

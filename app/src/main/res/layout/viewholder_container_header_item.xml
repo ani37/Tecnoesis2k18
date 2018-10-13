@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="80dp"
+    android:layout_height="40dp"
     android:layout_margin="5dp"
-    android:background="@drawable/bg_header"
+    android:background="@drawable/bg_white_border_gradient_dark"
     >
     <TextView
         android:id="@+id/tv_header_title"

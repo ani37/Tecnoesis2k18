@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background_lighter_black">
+        <TextView
+            android:id="@+id/tv_robotron_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_tab_size"
+            android:textSize="30sp"
+            tools:text="ROBOWARS"
+            android:textColor="@color/text_color"
+            android:textAlignment="center"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_marginBottom="5dp"
+            android:id="@+id/tv_header_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textColor="#e7b81e"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <TextView
+            android:id="@+id/tv_module_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="The flagship event of any Robotics competition, Robowars, sees the age old entertainment of two robots battling it out in the center to be the last one standing. This presents a chance for the challenger to show their robotic acumen, intellect, and fighter spirit. Teams are encouraged to equip their bots with high torqued industrial motors, protective armour sheets, and well designed weapons to take down the enemy bot. "
+            android:textColor="@color/text_color"
+            android:textAlignment="center"
+            />
+        <TextView
+            android:id="@+id/tv_header_problem_statement"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Problem Statement"
+            android:textColor="#e7b81e"
+            android:layout_gravity="center_horizontal"
+            />
+        <TextView
+            android:id="@+id/tv_problem_statement_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Design and construct a robot capable of fighting another in a one on one tournament. This event aims to test your Robot against another in a field of combat where brute strength and cat-like reflexes hold the key to success. "
+            android:textColor="@color/text_color"
+            android:textAlignment="center"
+            />
+        <TextView
+            android:id="@+id/tv_header_misc1"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Misc Header 1"
+            android:textColor="#e7b81e"
+            android:layout_gravity="center_horizontal"
+            />
+        <TextView
+            android:id="@+id/tv_desc_misc1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Design and construct a robot capable of fighting another in a one on one tournament. This event aims to test your Robot against another in a field of combat where brute strength and cat-like reflexes hold the key to success. "
+            android:textColor="@color/text_color"
+            android:textAlignment="center"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_pdf_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#e7b81e"
+            android:text="Refer to the pdf for more instructions."
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_contact_header"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact:"
+            android:textStyle="bold"
+            android:textColor="@color/text_color"
+            />
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/tv_contact1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Rohit Lohia - 7044444444"
+            android:textColor="@color/text_color"
+            />
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/tv_contact2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Rohit Lohia - 7044444444"
+            android:textColor="@color/text_color"
+            />
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/tv_contact3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Rohit Lohia - 7044444444"
+            android:textColor="@color/text_color"
+            />
+        <TextView
+            android:id="@+id/tv_register_link"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLick here to Register!"
+            android:typeface="monospace"
+            android:textColor="#e7b81e"
+            />
+
+        <TextView
+            android:id="@+id/tv_header_misc2"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Misc Header 2"
+            android:textColor="#e7b81e"
+            android:layout_gravity="center_horizontal"
+            />
+        <TextView
+            android:id="@+id/tv_desc_misc2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Design and construct a robot capable of fighting another in a one on one tournament. This event aims to test your Robot against another in a field of combat where brute strength and cat-like reflexes hold the key to success. "
+            android:textColor="@color/text_color"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:id="@+id/tv_robotron_prize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            tools:text="Prize Money : Rs 20000/-"
+            android:layout_marginTop="5dp"
+            />
+
+
+    </LinearLayout>
+</ScrollView>

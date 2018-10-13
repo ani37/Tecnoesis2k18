@@ -89,11 +89,6 @@ public class CustomWorkshopAdapter extends RecyclerView.Adapter<CustomWorkshopAd
                 //setting the image
                 img.setImageDrawable(mCtx.getDrawable(mList.get(position).getImgRes()));
 
-                //setting the text description
-                TextView tv = mainView.findViewById(R.id.dialog_event_des);
-                tv.setText(mList.get(position).getmSummary());
-
-
                 dialog.show();
                 ImageView share = mainView.findViewById(R.id.dialog_icon_share);
                 share.setOnClickListener(new View.OnClickListener() {

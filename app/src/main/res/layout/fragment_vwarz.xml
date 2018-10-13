@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background_lighter_black">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_tab_size"
+            android:textSize="30sp"
+            android:text="1. CSGO"
+            android:textColor="@color/text_color"
+            android:textAlignment="center"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textColor="#e7b81e"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="When the dust has settled there are only a select few who leave their mark permanently edged into history and have their own unique paths to become Eternal Legends. Sometimes its for the gifted, the ones who share sheer force of will bend the laws of physics. Then there are the godlike those who believe immortality and valhalla joyously awaits. Which one is in you - The Gifted? The Godlike? Is your team the best of the best? "
+            android:textColor="@color/text_color"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_tab_size"
+            android:textSize="30sp"
+            android:text="2. COD4 MODERN WARFARE"
+            android:textColor="@color/text_color"
+            android:textAlignment="center"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textColor="#e7b81e"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Highly competitive multiplayer sport which serves as the ultimate test of decision making on the battlefield. With the pressures of a short time limit and bomb plant looming over every round, this game often delivers some of the best team and individual action gameplays. The fast-paced battle is back into action. The Assaulters, the Rushers, the pumped-up Shooters and lastly the Sniper. Has your team got it all? "
+            android:textColor="@color/text_color"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_tab_size"
+            android:textSize="30sp"
+            android:text="3. FIFA 18"
+            android:textColor="@color/text_color"
+            android:textAlignment="center"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textColor="#e7b81e"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="When it comes to football, there's no denying it. There’s no better way to see someone’s true colors than by playing them in a game of FIFA. The club they play with, the formation they choose, and the coaching style they use all speak volumes as to what kind of person they are. What play style do you prefer? "
+            android:textColor="@color/text_color"
+            android:textAlignment="center"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_marginTop="50dp"
+            android:textSize="30sp"
+            android:textColor="@color/text_color"
+            android:text="More Events, Registration links, Rules and Organisers Details will be updated soon!!!!"
+            />
+
+
+
+
+    </LinearLayout>
+</ScrollView>

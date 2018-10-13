@@ -11,9 +11,9 @@
     <ImageView
         android:id="@+id/iv_event_image"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="250dp"
         android:background="@drawable/background_border"
-        android:scaleType="centerCrop"
+        android:scaleType="fitXY"
         tools:src="@mipmap/ic_launcher"
         />
 

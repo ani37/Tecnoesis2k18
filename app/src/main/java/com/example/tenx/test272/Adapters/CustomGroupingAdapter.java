@@ -1,7 +1,9 @@
 package com.example.tenx.test272.Adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Rect;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
@@ -9,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -55,8 +58,8 @@ public class CustomGroupingAdapter extends RecyclerView.Adapter<RecyclerView.Vie
         }else{
             ImageView img = ((EventViewHolder) customViewHolder).ivImage;
             String url = ((EventItem) mList.get(i)).getUrl();
-            Glide.with(mCtx).load(url).apply(new RequestOptions().fitCenter()).into(img);
-            img.setOnClickListener(getListener(url));
+            img.setBackgroundResource(((EventItem) mList.get(i)).getImgRes());
+            img.setOnClickListener(getListener(((EventItem) mList.get(i)).getImgRes()));
         }
     }
 
@@ -86,23 +89,26 @@ public class CustomGroupingAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     }
 
 
-        public View.OnClickListener getListener(final String url){
+        public View.OnClickListener getListener(final int imgRes){
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(mCtx);
                 //main view
                 final View mainView = LayoutInflater.from(mCtx).inflate(R.layout.dialog_layout, null);
-
+                Rect displayRectangle = new Rect();
+                Activity activity = (Activity) mCtx;
+                Window window = activity.getWindow();
+                window.getDecorView().getWindowVisibleDisplayFrame(displayRectangle);
+                mainView.setMinimumWidth((int)(displayRectangle.width() * 0.9f));
+                mainView.setMinimumHeight((int)(displayRectangle.height() * 0.9f));
                 //building the dialog
                 builder.setView(mainView);
                 builder.setCancelable(true);
                 final AlertDialog dialog = builder.create();
 
                 ImageView img = mainView.findViewById(R.id.dialog_event_image);
-                TextView tv = mainView.findViewById(R.id.dialog_event_des);
-                Glide.with(mCtx).load(url).apply(new RequestOptions().centerCrop()).into(img);
-                tv.setText(mCtx.getResources().getString(R.string.test_desc));
+                img.setBackgroundResource(imgRes);
                 dialog.show();
                 ImageView share = mainView.findViewById(R.id.dialog_icon_share);
                 share.setOnClickListener(new View.OnClickListener() {

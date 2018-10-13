@@ -84,7 +84,7 @@ public class FragmentNotifications extends Fragment{
                 assert manager != null;
                 android.support.v4.app.FragmentTransaction ft = manager.beginTransaction();
                 ft.setCustomAnimations(R.anim.slide_in, R.anim.slide_out);
-                ft.replace(R.id.container_notif_frame, new ChildFragmentRobotronResults());
+                ft.addToBackStack(null).replace(R.id.container_notif_frame, new ChildFragmentRobotronResults());
                 ft.commit();
 
             }
@@ -96,7 +96,7 @@ public class FragmentNotifications extends Fragment{
                 assert manager != null;
                 android.support.v4.app.FragmentTransaction ft = manager.beginTransaction();
                 ft.setCustomAnimations(R.anim.slide_in, R.anim.slide_out);
-                ft.replace(R.id.container_notif_frame, new ChildFragmentConferenzaResults());
+                ft.addToBackStack(null).replace(R.id.container_notif_frame, new ChildFragmentConferenzaResults());
                 ft.commit();
             }
         });
@@ -108,7 +108,7 @@ public class FragmentNotifications extends Fragment{
                 android.support.v4.app.FragmentTransaction ft = manager.beginTransaction();
                 ft.setCustomAnimations(R.anim.slide_in, R.anim.slide_out);
                 ft.replace(R.id.container_notif_frame, new ChildFragmentOthersResults());
-                ft.commit();
+                ft.addToBackStack(null).commit();
             }
         });
 

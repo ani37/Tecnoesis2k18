@@ -65,7 +65,7 @@ public class FragmentHome extends Fragment{
             }
         });
         tabs.getTabAt(0).setIcon(R.drawable.icon_events_24dp);
-        tabs.getTabAt(0).setText("Events");
+        tabs.getTabAt(0).setText("NITS HACKS 2.0");
         tabs.getTabAt(1).setIcon(R.drawable.icon_workshop_24dp);
         tabs.getTabAt(1).setText("Workshops");
         tabs.getTabAt(2).setIcon(R.drawable.icon_modules_24dp);

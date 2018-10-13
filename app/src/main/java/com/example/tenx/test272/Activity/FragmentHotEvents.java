@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,6 +40,8 @@ public class FragmentHotEvents extends Fragment{
         View view = inflater.inflate(R.layout.fragment_hot_events, container, false);
         recyclerView = view.findViewById(R.id.recyclerView_whatshot);
         fab = view.findViewById(R.id.scanner_bar);
+
+
         adapter = new CustomGroupingAdapter(getActivity());
         GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 2);
         layoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
@@ -55,6 +58,8 @@ public class FragmentHotEvents extends Fragment{
                 }
             }
         });
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adapter);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,11 +68,12 @@ public class FragmentHotEvents extends Fragment{
 
             }
         });
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(adapter);
 
         return view;
     }
+
+
+
     private void startQRScanner() {
         new IntentIntegrator(this.getActivity()).forSupportFragment(this).initiateScan();
     }

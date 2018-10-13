@@ -8,24 +8,17 @@
     <string name="home_ic2_title">Workshops</string>
     <string name="home_ic3_title">Modules</string>
     <string name="home_ic4_title">Spark</string>
-    <string name="test_desc">This is a test description.This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.</string>
+    <string name="test_desc">This is a test description.This is a test description</string>
     <string name="menu_item1">RemoveAll</string>
     <string name="facebook_app_id">216587905680687</string>
     <string name="fb_login_protocol_scheme">fb216587905680687</string>
+    <string name="draft_ritz">Designing plays an essential role in innovation. The field of designing accounts for majority of private research and development spending and employs a significant percentage of engineers. In order for society to benefit from the latest advances in technology, skilled engineers and novel designing techniques will be required.
+
+There is a thirst among every engineer for designing, a thirst which is motivated by seeing day to day things ranging from a small pin to huge working machine. This thirst which has resulted for the designing of basic component parts of a machine to the design of highly sophisticated engines. General design competitions have always had a constraint that bounds the imaginative skills of the enthusiasts to create something new or intuitive, so to tackle this ASME NIT Silchar Chapter came up with this competition. It is a competitive event where the design and imaginative skills of the participants will be put to test under the ticking of a clock. </string>
+    <string name="rocket_to_polemos">
+        Ever wondered how to make rockets? Here is your chance. This Tecnoesis ASME NIT Silchar Chapter presents to you Rocketo Polemos, an amateur rocketry competition where you will build your own rocket and compete with others. We have always had that little curiosity and desire to build rockets since childhood, this is the time to showcase your hidden talent.
+
+The competition expects the participants to showcase their innovative ideas and how they can apply their ideas and knowledge in the field of application and design a rocket. A basic knowledge of Chemistry of fuel and oxidizers is expected although it isn’t necessary. Your interest matters not your branch or discipline. Come join us and check whether you have the necessary skills to fly up high in the sky
+    </string>
+    <string name="sailor_safari">Are you fond of making paper boats during rainy season and love to compete as to which one goes faster? Then look no further as, this Tecnoesis ASME NIT Silchar Chapter presents to you Sailor Safari. The event comprises of a boat racing competition where you will build your own boat competing against time and other participants (or should we say pirate sailors!!!). Guess what?? There\'s only one rule, the fastest shall survive. Come join us on this ride and enjoy the thrill on top of a boat and see whether you can weather the storm and battle your way to glory. </string>
 </resources>

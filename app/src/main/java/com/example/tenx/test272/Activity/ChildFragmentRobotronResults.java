@@ -100,6 +100,8 @@ public class ChildFragmentRobotronResults extends Fragment {
 
     }
 
+
+
     public void goBack(){
         android.support.v4.app.FragmentManager manager = getFragmentManager();
         assert manager != null;
@@ -123,7 +125,4 @@ public class ChildFragmentRobotronResults extends Fragment {
             }
         }
     }
-
-
-
 }

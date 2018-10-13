@@ -29,7 +29,7 @@ public class FragmentSpark extends Fragment{
         View view = inflater.inflate(R.layout.fragment_spark, container, false);
         recycler = view.findViewById(R.id.recycler_spark_gallery);
         adapter = new CustomSparkAdapter(getActivity());
-        recycler.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+        recycler.setLayoutManager(new GridLayoutManager(getActivity(), 1));
         recycler.setAdapter(adapter);
         return view;
     }
