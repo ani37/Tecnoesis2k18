@@ -19,15 +19,19 @@
             android:layout_height="80dp"
             tools:src="@mipmap/ic_launcher"
             android:layout_margin="4dp"/>
+
         <TextView
             android:id="@+id/tv_profile_name"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
             android:layout_weight="1"
-            tools:text="Mairing Tenx Hojai"
-            android:gravity="center"
+            android:fontFamily="cursive"
+            android:textAllCaps="false"
             android:textColor="@color/text_color"
-            />
+            android:textSize="18sp"
+            tools:text="Hello,\nMairing Tenx Hojai" />
 
         <Button
             android:id="@+id/btn_logout"
@@ -38,31 +42,96 @@
             android:text="logout"
             android:textColor="@color/text_color"
             android:layout_marginEnd="30dp"
+
             />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:id="@+id/point"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_white_border_gradient_dark"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical"
+            android:text="QR SCORE : 0"
+            android:textAllCaps="false"
+            android:textColor="@color/text_color"
+            android:textSize="40sp"
+            android:textStyle="italic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/scanner_bar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:src="@drawable/ic_center_focus_weak_black_24dp" />
+
+            <TextView
+                android:id="@+id/Qr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="2dp"
+                android:text="QR SCANNER"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-condensed"
+        android:text="NOTE: Scan the QR code at any event and so, attend as many events to earn goodies..."
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="italic" />
+
     <TextView
         android:id="@+id/tv_sponsors"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginTop="230dp"
         android:background="@drawable/bg_profile_image"
-        android:text="SPONSORS"
-        android:textColor="@color/text_color"
-        android:textSize="22sp"
-        android:textAlignment="center"
+        android:fontFamily="serif"
         android:gravity="center"
-        />
+        android:text="SPONSORS"
+        android:textAlignment="center"
+        android:textColor="@color/text_color"
+        android:textSize="22sp" />
+
     <TextView
         android:id="@+id/tv_team"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/bg_profile_image"
-        android:text="TEAM"
-        android:textColor="@color/text_color"
-        android:textSize="22sp"
-        android:textAlignment="center"
+        android:fontFamily="serif"
         android:gravity="center"
-        />
+        android:text="TEAM"
+        android:textAlignment="center"
+        android:textColor="@color/text_color"
+        android:textSize="22sp" />
 
 
 
