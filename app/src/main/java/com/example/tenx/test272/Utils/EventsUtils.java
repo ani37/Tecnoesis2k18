@@ -19,13 +19,21 @@ public class EventsUtils {
     public static List<ListItem> getData(){
         List<ListItem> list = new ArrayList<>();
         list.add(new HeaderItem("28 October 2018"));
-        list.add(new EventItem("event1", "http://tecnoesis.in/vr/images/Modules/schoolgenius.png", "Updating soon!", R.drawable.event_arc));
-        list.add(new EventItem("event1", "http://tecnoesis.in/vr/images/Modules/schoolgenius.png", "Updating soon!", R.drawable.event_pixelate));
-        list.add(new EventItem("event1", "http://tecnoesis.in/vr/images/Modules/schoolgenius.png", "Updating soon!", R.drawable.event_rart));
-        list.add(new EventItem("event1", "http://tecnoesis.in/vr/images/Modules/schoolgenius.png", "Updating soon!", R.drawable.event_robowar));
-        list.add(new EventItem("event1", "http://tecnoesis.in/vr/images/Modules/schoolgenius.png", "Updating soon!", R.drawable.event_xtyping));
-        list.add(new EventItem("event1", "http://tecnoesis.in/vr/images/Modules/schoolgenius.png", "Updating soon!", R.drawable.event_sgenius));
+        list.add(new EventItem("event1", "http://tecnoesis.in/vr/images/Modules/schoolgenius.png", "Updating soon!", R.drawable.g9));
+        list.add(new EventItem("event1", "http://tecnoesis.in/vr/images/Modules/schoolgenius.png", "Updating soon!", R.drawable.r1));
+        list.add(new EventItem("event1", "http://tecnoesis.in/vr/images/Modules/schoolgenius.png", "Updating soon!", R.drawable.g11));
+        list.add(new EventItem("event1", "http://tecnoesis.in/vr/images/Modules/schoolgenius.png", "Updating soon!", R.drawable.r2));
+        list.add(new EventItem("event1", "http://tecnoesis.in/vr/images/Modules/schoolgenius.png", "Updating soon!", R.drawable.g13));
+        list.add(new EventItem("event1", "http://tecnoesis.in/vr/images/Modules/schoolgenius.png", "Updating soon!", R.drawable.g14));
         list.add(new HeaderItem("29 October 2018"));
+        list.add(new EventItem("event1", "http://tecnoesis.in/vr/images/Modules/schoolgenius.png", "Updating soon!", R.drawable.b1));
+        list.add(new EventItem("event1", "http://tecnoesis.in/vr/images/Modules/schoolgenius.png", "Updating soon!", R.drawable.b2));
+        list.add(new EventItem("event1", "http://tecnoesis.in/vr/images/Modules/schoolgenius.png", "Updating soon!", R.drawable.b3));
+        list.add(new EventItem("event1", "http://tecnoesis.in/vr/images/Modules/schoolgenius.png", "Updating soon!", R.drawable.b4));
+        list.add(new EventItem("event1", "http://tecnoesis.in/vr/images/Modules/schoolgenius.png", "Updating soon!", R.drawable.b5));
+        list.add(new EventItem("event1", "http://tecnoesis.in/vr/images/Modules/schoolgenius.png", "Updating soon!", R.drawable.b6));
+        list.add(new EventItem("event1", "http://tecnoesis.in/vr/images/Modules/schoolgenius.png", "Updating soon!", R.drawable.b7));
+        list.add(new EventItem("event1", "http://tecnoesis.in/vr/images/Modules/schoolgenius.png", "Updating soon!", R.drawable.b8));
         list.add(new EventItem("event1", "http://tecnoesis.in/vr/images/Modules/schoolgenius.png", "Updating soon!", R.drawable.soon));
         list.add(new EventItem("event1", "http://tecnoesis.in/vr/images/Modules/schoolgenius.png", "Updating soon!", R.drawable.soon));
 

@@ -10,7 +10,7 @@
         android:id="@+id/vh_events_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:src="@drawable/event_shootout"
+        tools:src="@drawable/event_arc"
         android:scaleType="fitXY"
         android:gravity="center"
         android:textSize="40sp"

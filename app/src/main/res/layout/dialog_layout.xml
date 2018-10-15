@@ -42,6 +42,7 @@
             android:id="@+id/dialog_icon_share"
             android:layout_width="24dp"
             android:layout_height="24dp"
+            android:visibility="gone"
             android:layout_centerHorizontal="true"
             android:src="@drawable/icon_dialog_share_24dp"
             />
