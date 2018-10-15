@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+   android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -106,34 +110,149 @@
         android:text="NOTE: Scan the QR code at any event and so, attend as many events to earn goodies..."
         android:textAlignment="center"
         android:textColor="@android:color/holo_red_dark"
+        android:layout_marginBottom="30dp"
         android:textStyle="italic" />
-
     <TextView
-        android:id="@+id/tv_sponsors"
+        android:id="@+id/Sponser"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="230dp"
         android:background="@drawable/bg_profile_image"
         android:fontFamily="serif"
         android:gravity="center"
-        android:text="SPONSORS"
+        android:text="SPONSERS"
         android:textAlignment="center"
         android:textColor="@color/text_color"
-        android:textSize="22sp" />
 
+        android:textSize="22sp" />
     <TextView
         android:id="@+id/tv_team"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginBottom="30dp"
         android:background="@drawable/bg_profile_image"
         android:fontFamily="serif"
         android:gravity="center"
         android:text="TEAM"
         android:textAlignment="center"
         android:textColor="@color/text_color"
+
         android:textSize="22sp" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/nitish"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:src="@drawable/event_pixelate"
+            tools:src="@mipmap/ic_launcher" />
 
+        <TextView
+            android:id="@+id/nitish_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:background="@drawable/bg_white_border_gradient_dark"
+            android:fontFamily="cursive"
 
+            android:text=" Nitish Dash\n(Technical Head)"
+            android:textColor="@color/com_facebook_button_background_color_pressed"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/aniket"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ani"
+            android:layout_gravity="center"
+            tools:src="@mipmap/ic_launcher"
+            android:layout_margin="4dp"/>
+
+        <TextView
+            android:id="@+id/ani_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:background="@drawable/bg_white_border_gradient_dark"
+            android:fontFamily="cursive"
+
+            android:text=" Aniket Agarwalla\n(Android Developer)"
+            android:textColor="@color/com_facebook_button_background_color_pressed"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/mairing"
+            android:layout_width="80dp"
+            android:src="@drawable/mai"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            tools:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/mairing_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:background="@drawable/bg_white_border_gradient_dark"
+
+            android:fontFamily="cursive"
+            android:text=" Mairing Tenx Hojoi\n(Android Developer)"
+            android:textColor="@color/com_facebook_button_background_color_pressed"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/khusboo"
+            android:src="@drawable/khusboo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            tools:src="@mipmap/ic_launcher"
+            android:layout_margin="4dp"/>
+
+        <TextView
+            android:id="@+id/khusboo_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:background="@drawable/bg_white_border_gradient_dark"
+            android:fontFamily="cursive"
+            android:text=" Khusboo Maloo\n(Android Developer)"
+            android:textColor="@color/com_facebook_button_background_color_pressed"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    </LinearLayout>
 </LinearLayout>
+</ScrollView>

@@ -51,12 +51,13 @@ public class FragmentMenu extends Fragment {
     PackageManager packageManager;
     String currentuser;
     FloatingActionButton fab;
-    TextView point;
+    TextView point,nitish_t,ani_t,mairing_t,khusboo_t,sponsers;
     //tag
     private static final String TAG = "MenuActivity";
     //imageViews
-    CircleImageView civ_profile;
-    TextView tvName, tvSponsors, tvTeam;
+    CircleImageView civ_profile,nitish,ani,khusboo,mairing;
+
+    TextView tvName, tvSponsors, tvTeam,team;
     GoogleSignInClient mGoogleSignInClient;
     GoogleSignInOptions gso;
     public void addUser(){
@@ -275,6 +276,17 @@ public class FragmentMenu extends Fragment {
                 });
 
     }
+    public void backin(){
+        nitish.animate().translationXBy(+1000f).setDuration(4000);
+        nitish_t.animate().translationXBy(-1000f).setDuration(4000);
+        ani.animate().translationXBy(+1000f).setDuration(4000);
+        ani_t.animate().translationXBy(+1000f).setDuration(4000);
+        mairing.animate().translationYBy(-1000f).setDuration(4000);
+        mairing_t.animate().translationYBy(-1000f).setDuration(4000);
+        khusboo.animate().translationXBy(-1000f).setDuration(4000);
+        khusboo_t.animate().translationXBy(-1000f).setDuration(4000);
+        team.setClickable(false);
+    }
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -298,6 +310,43 @@ public class FragmentMenu extends Fragment {
 
                 startQRScanner();
 
+            }
+        });
+        //developers
+        nitish = view.findViewById(R.id.nitish);
+        ani= view.findViewById(R.id.aniket);
+        khusboo= view.findViewById(R.id.khusboo);
+        mairing= view.findViewById(R.id.mairing);
+        nitish_t = view.findViewById(R.id.nitish_text);
+        ani_t= view.findViewById(R.id.ani_text);
+        khusboo_t= view.findViewById(R.id.khusboo_text);
+        mairing_t= view.findViewById(R.id.mairing_text);
+        sponsers=view.findViewById(R.id.Sponser);
+        team=view.findViewById(R.id.tv_team);
+        nitish.animate().translationX(-1000f);
+        nitish_t.animate().translationX(+1000f);
+        ani.animate().translationX(-1000f);
+        ani_t.animate().translationX(-1000f);
+        mairing.animate().translationY(+1000f);
+        mairing_t.animate().translationY(+1000f);
+        khusboo.animate().translationX(+1000f);
+        khusboo_t.animate().translationX(+1000f);
+        team.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                backin();
+            }
+        });
+        team.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                backin();
+            }
+        });
+        sponsers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getContext(),"To be updated soon!",Toast.LENGTH_SHORT).show();
             }
         });
         //civ
@@ -329,21 +378,6 @@ public class FragmentMenu extends Fragment {
             }
         });
 
-
-        tvSponsors = view.findViewById(R.id.tv_sponsors);
-        tvSponsors.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getActivity(), "Updating soon!", Toast.LENGTH_SHORT).show();
-            }
-        });
-        tvTeam = view.findViewById(R.id.tv_team);
-        tvTeam.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getActivity(), "Updating soon!", Toast.LENGTH_SHORT).show();
-            }
-        });
 
 
 
