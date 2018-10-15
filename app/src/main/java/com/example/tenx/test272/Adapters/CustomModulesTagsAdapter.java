@@ -12,19 +12,25 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.tenx.test272.Activity.FragmentModules;
-import com.example.tenx.test272.Activity.ModuleActivity1;
 import com.example.tenx.test272.Activity.ModulesActivity;
 import com.example.tenx.test272.R;
 
 import com.example.tenx.test272.Utils.EventsUtils;
+import com.example.tenx.test272.Utils.Models.ModuleEvent;
 
-public class CustomModulesAdapter extends RecyclerView.Adapter<CustomModulesAdapter.CustomViewHolder>{
+import java.util.List;
+
+public class CustomModulesTagsAdapter extends RecyclerView.Adapter<CustomModulesTagsAdapter.CustomViewHolder>{
 
     private Context context;
+    private List<ModuleEvent> mList;
+    int pos;
 
 
-    public CustomModulesAdapter(Context context) {
+    public CustomModulesTagsAdapter(Context context, List<ModuleEvent> list, int pos) {
         this.context = context;
+        this.mList = list;
+        this.pos = pos;
     }
 
 
@@ -54,49 +60,16 @@ public class CustomModulesAdapter extends RecyclerView.Adapter<CustomModulesAdap
 
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
-        String currentEvent = EventsUtils.getModulesNames().get(position);
+        String currentEvent = mList.get(position).getName();
         holder.tvModule.setText(currentEvent);
-        final int key;
-        if(position == 0){
-            key = FragmentModules.KEY_ROBOTRON;
-        }else if(position == 1){
-            key = FragmentModules.KEY_SHOWCASE;
-        }else if(position == 2){
-            key = FragmentModules.KEY_AMAZERS;
-        }
-        else if(position == 3){
-            key = FragmentModules.KEY_CONFERENZA;
-        }
-        else if(position == 4){
-            key = FragmentModules.KEY_CYBERWARP;
-        }
-        else if(position == 5){
-            key = FragmentModules.KEY_VWARZ;
-        }
-        else if(position == 6){
-            key = FragmentModules.KEY_SMARKCITY;
-        }
-        else if(position == 7){
-            key = FragmentModules.KEY_MYNDSNARE;
-        }
-        else if(position == 8){
-            key = FragmentModules.KEY_EMPRESSARIO;
-        }
-        else if(position == 9){
-            key = FragmentModules.KEY_SCHOOLGENIUS;
-        }
-        else if(position == 10){
-            key = FragmentModules.KEY_ASME;
-        }
-        else{
-            key = -1;
-        }
+        final int key = position;
 
         holder.container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, ModuleActivity1.class);
+                Intent intent = new Intent(context, ModulesActivity.class);
                 intent.putExtra("key", key);
+                intent.putExtra("pos", pos);
                 context.startActivity(intent);
             }
         });
@@ -104,6 +77,6 @@ public class CustomModulesAdapter extends RecyclerView.Adapter<CustomModulesAdap
 
     @Override
     public int getItemCount() {
-        return EventsUtils.getModulesNames().size();
+        return mList.size();
     }
 }

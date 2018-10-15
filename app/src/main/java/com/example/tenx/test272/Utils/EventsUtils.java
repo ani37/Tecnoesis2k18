@@ -51,7 +51,7 @@ public class EventsUtils {
         list.add("V-WARZ");
         list.add("SMARTCITY");
         list.add("MYNDSNARE");
-        list.add("EMPRESAAARIO");
+        list.add("EMPRESAARIO");
         list.add("SCHOOL GENIUS");
         list.add("ASME");
         return list;

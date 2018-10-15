@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_profile_image"
+    >
+    <TextView
+        android:id="@+id/tv_module_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Test Ttle"
+        android:textSize="30sp"
+        android:textColor="@color/text_color"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:background="@drawable/bg_profile_image"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_tags"
+        android:layout_width="match_parent"
+        android:layout_margin="3dp"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>
