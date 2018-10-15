@@ -57,7 +57,7 @@ public class FragmentMenu extends Fragment {
     //imageViews
     CircleImageView civ_profile,nitish,ani,khusboo,mairing;
 
-    TextView tvName, tvSponsors, tvTeam,team;
+    TextView tvName, tvpoint, tvTeam,team;
     GoogleSignInClient mGoogleSignInClient;
     GoogleSignInOptions gso;
     public void addUser(){
@@ -299,6 +299,13 @@ public class FragmentMenu extends Fragment {
         //scanner +database
         db = FirebaseFirestore.getInstance();
         point= view.findViewById(R.id.point);
+        point.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getActivity(), "Attend more events to earn goodies!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         fab = view.findViewById(R.id.scanner_bar);
         packageManager = Objects.requireNonNull(getActivity()).getPackageManager();
         currentuser = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid();
@@ -312,6 +319,12 @@ public class FragmentMenu extends Fragment {
 
             }
         });
+
+
+
+        //point tv
+
+
         //developers
         nitish = view.findViewById(R.id.nitish);
         ani= view.findViewById(R.id.aniket);

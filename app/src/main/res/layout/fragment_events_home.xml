@@ -44,6 +44,7 @@
             android:text="@string/hackathon"
             android:textColor="@color/text_color"
             android:textAlignment="center"
+            android:background="@drawable/bg_workshop_item"
             />
         <TextView
             android:id="@+id/tv_hack_register"
@@ -70,6 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/codingcomp"
+            android:background="@drawable/bg_workshop_item"
             android:textColor="@color/text_color"
             android:textAlignment="center"
             />

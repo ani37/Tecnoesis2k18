@@ -34,6 +34,7 @@
             android:id="@+id/tv_module_desc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/bg_workshop_item"
             tools:text="The flagship event of any Robotics competition, Robowars, sees the age old entertainment of two robots battling it out in the center to be the last one standing. This presents a chance for the challenger to show their robotic acumen, intellect, and fighter spirit. Teams are encouraged to equip their bots with high torqued industrial motors, protective armour sheets, and well designed weapons to take down the enemy bot. "
             android:textColor="@color/text_color"
             android:textAlignment="center"
@@ -154,6 +155,7 @@
             android:textColor="@color/text_color"
             tools:text="Prize Money : Rs 20000/-"
             android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
             />
 
 
