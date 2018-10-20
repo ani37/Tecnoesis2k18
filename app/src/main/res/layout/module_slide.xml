@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_profile_image"
+    android:background="@drawable/bg_dark_gradient"
     xmlns:tools="http://schemas.android.com/tools">
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,7 +34,7 @@
             android:id="@+id/tv_module_desc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_workshop_item"
+            android:background="@drawable/bg_dark_gradient_no_border"
             tools:text="The flagship event of any Robotics competition, Robowars, sees the age old entertainment of two robots battling it out in the center to be the last one standing. This presents a chance for the challenger to show their robotic acumen, intellect, and fighter spirit. Teams are encouraged to equip their bots with high torqued industrial motors, protective armour sheets, and well designed weapons to take down the enemy bot. "
             android:textColor="@color/text_color"
             android:textAlignment="center"

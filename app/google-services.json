@@ -23,6 +23,58 @@
           }
         },
         {
+          "client_id": "1023344813822-do7l0dab629jlukhdojk0p4hefulq8mq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tenx.test272",
+            "certificate_hash": "7ae55454fb263515575e80b2ec30c02d7204cb49"
+          }
+        },
+        {
+          "client_id": "1023344813822-ept6r9o2n8ve0qhn65q16mmce5l83tkq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTXLBpf1TzPW_j4ElPO30qkAsy8vLzws8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1023344813822-ept6r9o2n8ve0qhn65q16mmce5l83tkq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023344813822:android:411b3614ef558609",
+        "android_client_info": {
+          "package_name": "com.tecnoesis.tecnoesisApp.tecnoesis2k18"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1023344813822-fbettr1acqu8m7vkto96hbm90u5s55vn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tecnoesis.tecnoesisApp.tecnoesis2k18",
+            "certificate_hash": "7ae55454fb263515575e80b2ec30c02d7204cb49"
+          }
+        },
+        {
           "client_id": "1023344813822-ept6r9o2n8ve0qhn65q16mmce5l83tkq.apps.googleusercontent.com",
           "client_type": 3
         }

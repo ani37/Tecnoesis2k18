@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:background="@drawable/bg_workshop_item"
+        android:background="@drawable/bg_dark_gradient_no_border"
         >
         <ImageView
             android:id="@+id/iv_workshop_poster"

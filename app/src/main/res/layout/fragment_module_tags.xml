@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/bg_profile_image"
+    android:background="@drawable/bg_dark_gradient"
     >
     <TextView
         android:id="@+id/tv_module_header"
@@ -16,7 +16,7 @@
         android:textColor="@color/text_color"
         android:textStyle="bold"
         android:textAlignment="center"
-        android:background="@drawable/bg_profile_image"
+        android:background="@drawable/bg_dark_gradient"
         />
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_tags"
