@@ -24,10 +24,10 @@ public class HomeFragmentPagerAdapter extends FragmentPagerAdapter{
         Fragment fragment = null;
         switch (position){
             case 0:
-                fragment = new ChildFragmentEvents();
+                fragment = new FragmentModules();
                 break;
             case 1:
-                fragment = new FragmentModules();
+                fragment = new ChildFragmentEvents();
                 break;
             case 2:
                 fragment = new FragmentSpark();

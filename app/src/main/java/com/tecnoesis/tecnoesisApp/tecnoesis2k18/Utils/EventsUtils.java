@@ -328,6 +328,13 @@ public class EventsUtils {
         list.add(new TeamHeader("Patrons", list1));
 
         list1 = new ArrayList<>();
+        list1.add(new TeamMember("Anirban Roy", "Vice President",R.drawable.anirban));
+        list1.add(new TeamMember("Ankan Kishore Pathak", "General Secretary",R.drawable.ankan));
+        list1.add(new TeamMember("Victor Das", "Convener of Spark",R.drawable.victor));
+        list.add(new TeamHeader("Conveners", list1));
+
+
+        list1 = new ArrayList<>();
         list1.add(new TeamMember("Abhinav Asthana", "General Secretary Technical",R.drawable.asthana));
         list.add(new TeamHeader("Coordinator", list1));
 
@@ -394,10 +401,11 @@ public class EventsUtils {
         list1.add(new TeamMember("Ashraful Islam", "Marketing Head",R.drawable.ashraful));
         list1.add(new TeamMember("Nayanmani Deka", "Marketing Head",R.drawable.nayanmani));
         list1.add(new TeamMember("Tejash Prakash", "Marketing Head",R.drawable.tejash));
-        list.add(new TeamHeader("Marketting", list1));
+        list.add(new TeamHeader("Marketing", list1));
 
         list1 = new ArrayList<>();
         list1.add(new TeamMember("Anish Paul", "Decoration Head",R.drawable.anish));
+        list1.add(new TeamMember("Chiranjeet Das", "Decoration Head",R.drawable.chiranjet));
         list1.add(new TeamMember("Antaranga Talukdar", "Decoration Head",R.drawable.antaranga));
         list1.add(new TeamMember("Surya Pratap", "Decoration Head",R.drawable.sp));
         list1.add(new TeamMember("Nilpaban Nath", "Decoration Head",R.drawable.nilpaban));
@@ -408,6 +416,21 @@ public class EventsUtils {
         list1.add(new TeamMember("Eeshan Dutta", "Hospitality Head",R.drawable.eshan));
         list1.add(new TeamMember("Raghav Sharma", "Hospitality Head",R.drawable.raghav));
         list.add(new TeamHeader("Hospitality", list1));
+
+
+        list1 = new ArrayList<>();
+        list1.add(new TeamMember("Puberun Boruah", "Myndsnare Head",R.drawable.puberun));
+        list1.add(new TeamMember("Monseej Purkayastha", "Myndsnare Head",R.drawable.monseej));
+        list1.add(new TeamMember("Bijit Sarkar", "Conferenza Head",R.drawable.bijit));
+        list1.add(new TeamMember("Saurabh Singh", "Smart City Head",R.drawable.saurabh));
+        list1.add(new TeamMember("Prannoy Vikash Chandra", "ASME Head",R.drawable.pranoy));
+        list1.add(new TeamMember("Tanay Lohia", "V-Warz Head",R.drawable.tanay));
+        list1.add(new TeamMember("Dharitri Gogoi", "School Genius Head",R.drawable.dharitri));
+        list1.add(new TeamMember("Ayush Pandey", "Psyche Wizard XXI Head",R.drawable.ayush));
+        list1.add(new TeamMember("Kamlesh Biswal", "Cyberwarp Head",R.drawable.kamles));
+        list1.add(new TeamMember("Subhashish Chamua", "Robotron Head",R.drawable.subasis));
+        list1.add(new TeamMember("Aman Patel", "Empresaario Head",R.drawable.aman));
+        list.add(new TeamHeader("Module Heads", list1));
 
 
 

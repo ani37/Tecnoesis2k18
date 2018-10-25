@@ -179,21 +179,27 @@ public class FragmentMenu extends Fragment {
     }
     private void checkIfUserAlreadyExitsOrCreateOne(){
         DocumentReference docRef = db.collection("users").document(currentuser).collection("Events").document("Roboart");
-        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                DocumentSnapshot documentSnapshot = task.getResult();
-                assert documentSnapshot != null;
-                Log.e(TAG, String.valueOf(documentSnapshot));
-                if (!documentSnapshot.exists()){
-                    addUser();
-                    Log.e(TAG, "not Exits.........");
-                }else{
+            try {
+                docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                        DocumentSnapshot documentSnapshot = task.getResult();
+                        assert documentSnapshot != null;
+                        Log.e(TAG, String.valueOf(documentSnapshot));
+                        if (!documentSnapshot.exists()){
+                            addUser();
+                            Log.e(TAG, "not Exits.........");
+                        }else{
 
-                    Log.e(TAG,"Exits.........");
-                }
+                            Log.e(TAG,"Exits.........");
+                        }
+                    }
+                });
+            } catch (Exception e){
+                e.printStackTrace();
             }
-        });}
+
+    }
     public void updateData( String scanContent){
         final String s=scanContent;
 
@@ -331,13 +337,13 @@ public class FragmentMenu extends Fragment {
             civ_profile = view.findViewById(R.id.civ_profile_image);
 
             GoogleSignInAccount user = GoogleSignIn.getLastSignedInAccount(Objects.requireNonNull(getActivity()));
-
-            assert user != null;
-            Glide.with(Objects.requireNonNull(getActivity())).load(user.getPhotoUrl()).into(civ_profile);
-            tvName = view.findViewById(R.id.tv_profile_name);
-            String print = user.getDisplayName();
-            String h="Hello,\n"+print;
-            tvName.setText(h);
+            if (user != null){
+                Glide.with(Objects.requireNonNull(getActivity())).load(user.getPhotoUrl()).into(civ_profile);
+                tvName = view.findViewById(R.id.tv_profile_name);
+                String print = user.getDisplayName();
+                String h="Hello,\n"+print;
+                tvName.setText(h);
+            }
 
         }else {
             point.setVisibility(View.GONE);
@@ -430,5 +436,7 @@ public class FragmentMenu extends Fragment {
             Toast.makeText(getActivity(),"Nothing scanned",Toast.LENGTH_SHORT).show();
         }
     }
+
+
 
 }
