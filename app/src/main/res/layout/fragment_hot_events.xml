@@ -11,17 +11,8 @@
         android:id="@+id/recyclerView_whatshot"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/container_event_item"
+        tools:listitem="@layout/viewholder_container_event_item"
         >
     </android.support.v7.widget.RecyclerView>
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_qr_reader"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_margin="10dp"
-        android:src="@drawable/icon_qr_24dp"
-        />
 
 </RelativeLayout>

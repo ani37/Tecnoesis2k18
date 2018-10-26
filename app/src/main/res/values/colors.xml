@@ -2,12 +2,13 @@
 <resources>
     <color name="colorPrimary">#2D2D30</color>
     <color name="colorPrimaryDark">#222222</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#c74c4c</color>
     <color name="borderColor">#232222</color>
     <color name="tab_icon_color">#c43131</color>
     <color name="home_icon_color">#e4d0d0</color>
     <color name="circle_1">#c74c4c</color>
     <color name="text_color">#FFFFFF</color>
+    <color name="header_hacks">#d1eab7</color>
 
 
 
@@ -17,6 +18,13 @@
     <color name="tab_normal">#e4d0d0</color>
     <color name="toggle_on">#3ebf17</color>
     <color name="toggle_off">#dc2f08</color>
+    <color name="icon_fill">#f1cfcf</color>
+    <color name="link_highlight">#ecc33b</color>
+
+    //fab menu
+    <color name="fab_normal">#e27231</color>
+    <color name="fab_pressed">#e6986b</color>
+    <color name="fab_ripple">#eac3ac</color>
 
 
 </resources>

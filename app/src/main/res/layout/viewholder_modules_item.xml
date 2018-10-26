@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_mod"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@drawable/bg_dark_gradient_no_border"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_margin="3dp"
+    >
+   <!-- <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/moduleImage"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/robotron"
+        android:layout_margin="10dp"
+        app:civ_border_color="#e2dada"
+        app:civ_border_width="2dp"
+        />-->
+    <TextView
+        android:id="@+id/moduleDesc"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        tools:text="ROBOTRON"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="@color/text_color"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        />
+
+</LinearLayout>

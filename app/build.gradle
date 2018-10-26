@@ -3,11 +3,11 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.example.tenx.test272"
+        applicationId "com.tecnoesis.tecnoesisApp.tecnoesis2k18"
         minSdkVersion 22
         targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "3.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -16,6 +16,8 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+
 }
 
 dependencies {
@@ -36,11 +38,12 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:2.2.0'
 
     //firebase
-    implementation 'com.google.firebase:firebase-core:16.0.1'
-    implementation 'com.google.firebase:firebase-messaging:17.1.0'
+    implementation 'com.google.firebase:firebase-core:16.0.4'
+    implementation 'com.google.firebase:firebase-messaging:17.3.3'
+    implementation 'com.google.firebase:firebase-firestore:17.1.1'
     //authentication
-    implementation 'com.google.firebase:firebase-auth:16.0.2'
-
+    implementation 'com.google.firebase:firebase-auth:16.0.4'
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
     //facebook
     implementation 'com.facebook.android:facebook-android-sdk:4.35.0'
 
@@ -55,7 +58,15 @@ dependencies {
 
     //lottie
     implementation 'com.airbnb.android:lottie:2.5.5'
+    //QR SCANNER
+    implementation 'com.journeyapps:zxing-android-embedded:3.6.0'
+    implementation 'com.google.zxing:core:3.3.2'
 
+    //fab menu library
+    implementation 'com.github.clans:fab:1.6.4'
 
 }
+
+
+
 apply plugin: 'com.google.gms.google-services'

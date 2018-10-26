@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Test272</string>
+    <string name="app_name">Tecnoesis 2k18</string>
     <string name="title_r1c1">Events</string>
     <string name="title_r1c2">Workshops</string>
     <string name="title_r2c1">Modules</string>
@@ -8,24 +8,12 @@
     <string name="home_ic2_title">Workshops</string>
     <string name="home_ic3_title">Modules</string>
     <string name="home_ic4_title">Spark</string>
-    <string name="test_desc">This is a test description.This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.
-        This is a test description.</string>
+    <string name="test_desc">This is a test description.This is a test description</string>
     <string name="menu_item1">RemoveAll</string>
     <string name="facebook_app_id">216587905680687</string>
     <string name="fb_login_protocol_scheme">fb216587905680687</string>
+    <string name="hackathon"> “Hackathon” where students from inside and outside the college will get a platform to build upon their innovative ideas and exchanging their thoughts so as to enhance their technical skills and abilities, is all set to be the headliner of the grand conference.
+
+At the Hackathon, we want to get great minds together to build something great, something futuristic. It’s an opportunity to showcase your skills to your peer community, locally and worldwide. All in an intense 24-hour burst. </string>
+    <string name="codingcomp"> Following that we’ll be having a “Coding Competition” indulging coder-geeks from all over the country in a fiesty battle of brains. The coding competition will be structured similar to the ACM style. The coding extravaganza will be consisting of mind boggling brain teasers and the taste of bittersweet algorithm implementation. Rest assured it is going to be a nightmarish experience for the coders but it will also be an experience worth remembering.</string>
 </resources>

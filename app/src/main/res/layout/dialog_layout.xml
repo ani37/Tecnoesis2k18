@@ -1,40 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
     <ImageView
         android:id="@+id/dialog_event_image"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:scaleType="centerCrop"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="fitXY"
         android:layout_margin="5dp"
         tools:src="@drawable/ic_launcher_background"
         />
- <android.support.v4.widget.NestedScrollView
-     android:id="@+id/scrollView"
-     android:layout_width="match_parent"
-     android:layout_height="150dp"
-     android:layout_below="@id/dialog_event_image"
-     android:layout_margin="5dp">
-     <TextView
-         android:id="@+id/dialog_event_des"
-         android:layout_width="match_parent"
-         android:layout_marginTop="5dp"
-         android:textSize="14sp"
-         android:layout_height="150dp"
-         android:layout_below="@id/dialog_event_image"
-         android:layout_margin="5dp"
-         android:textAlignment="center"
-         tools:text="This is a test description!"
-         />
- </android.support.v4.widget.NestedScrollView>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_margin="5dp"
-        android:layout_below="@id/scrollView"
+        android:layout_below="@id/dialog_event_image"
         >
         <ImageView
             android:id="@+id/dialog_icon_close"
@@ -56,10 +42,11 @@
             android:id="@+id/dialog_icon_share"
             android:layout_width="24dp"
             android:layout_height="24dp"
+            android:visibility="gone"
             android:layout_centerHorizontal="true"
             android:src="@drawable/icon_dialog_share_24dp"
             />
 
     </RelativeLayout>
 
-</RelativeLayout>
+</LinearLayout>

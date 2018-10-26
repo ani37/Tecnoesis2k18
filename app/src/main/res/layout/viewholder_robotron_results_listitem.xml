@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_lighter_black"
+    android:layout_margin="5dp"
+    >
+    <TextView
+        android:id="@+id/tv_results_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        tools:text="testtest"
+        android:textSize="15sp"
+        android:layout_marginStart="10dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/text_color"
+        />
+
+</android.support.constraint.ConstraintLayout>
